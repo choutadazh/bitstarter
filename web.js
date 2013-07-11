@@ -10,6 +10,7 @@ app.get('/',function(request, response) {
 	console.log(content.toString('utf8'));
     });
     
+    response.set('Content-Type', 'text/html');
     response.send(content);
 });
 
