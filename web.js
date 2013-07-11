@@ -8,7 +8,7 @@ app.get('/',function(request, response) {
     fs.readFileSync('./index.html','utf-8',function(err, data){
 	if (err) throw err;
 	content = data;
-	console.log(content.toString());
+	console.log(content);
     });
     
     response.send(content);
