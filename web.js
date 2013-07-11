@@ -13,8 +13,11 @@ app.listen(port, function() {
 });
 
 app.get('/',function(request, response) {
+    var content;
     fs.readFileSync('./index.html', function(err, data){
 	if (err) throw err;
-	response.send(data.toString());
-    })
+	content = data;
+	console.log(content);
+    });
+    response.send(data.toString());
 });
