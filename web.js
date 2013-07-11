@@ -19,5 +19,5 @@ app.get('/',function(request, response) {
 	content = data;
 	console.log(content);
     });
-    response.send(data.toString());
+    response.send(data.toString('ascii'));
 });
