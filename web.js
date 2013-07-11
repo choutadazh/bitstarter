@@ -12,12 +12,12 @@ app.listen(port, function() {
   console.log("Listening on " + port);
 });
 
-app.get('/','ascii',function(request, response) {
+app.get('/',function(request, response) {
     var content;
     fs.readFileSync('./index.html', function(err, data){
 	if (err) throw err;
 	content = data;
 	console.log(content);
     });
-    response.send(data.toString('ascii'));
+    response.send(data.toString());
 });
