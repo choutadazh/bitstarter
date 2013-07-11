@@ -6,7 +6,10 @@ var app = express.createServer(express.logger());
 app.get('/',function(request, response) {
     var content;
     fs.readFileSync('./index.html',function(err, data){
-	if (err) throw err;
+	if (err) {
+	    throw err;
+	    console.log("Read Failed");
+	    }
 	console.log(content.toString('utf8'));
     });
     
