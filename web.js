@@ -8,10 +8,10 @@ app.get('/',function(request, response) {
     fs.readFileSync('./index.html', function(err, data){
 	if (err) throw err;
 	content = data;
-	console.log(content);
+	console.log(content.toString());
     });
     
-    response.send(data.toString());
+    response.send(data);
 });
 
 var port = process.env.PORT || 5000;
